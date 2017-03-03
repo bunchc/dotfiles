@@ -39,20 +39,49 @@ sudo apt-get -qq dist-upgrade
 
 # Install APT packages.
 packages=(
-  ansible
-  build-essential
-  cowsay
-  git-core
-  htop
-  id3tool
-  jq
-  libssl-dev
-  mercurial
-  nmap
-  silversearcher-ag
-  sl
-  telnet
-  tree
+    ansible
+    build-essential
+    cowsay
+    git-core
+    htop
+    id3tool
+    jq
+    libssl-dev
+    mercurial
+    nmap
+    silversearcher-ag
+    sl
+    tree
+    screen
+    tmux
+    bmon
+    traceroute
+    speedtest_cli
+    ssh-copy-id
+    iptables
+    binutils
+    binwalk
+    cifer
+    dex2jar
+    dns2tcp
+    fcrackzip
+    foremost
+    hashpump
+    hydra
+    john
+    knock
+    netpbm
+    nmap
+    pngcheck
+    socat
+    sqlmap
+    tcpflow
+    tcpreplay
+    tcptrace
+    ucspi-tcp
+    xpdf
+    xz
+    testssl
 )
 
 packages=($(setdiff "${packages[*]}" "$(dpkg --get-selections | grep -v deinstall | awk '{print $1}')"))
