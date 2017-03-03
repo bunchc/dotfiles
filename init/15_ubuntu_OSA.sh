@@ -9,5 +9,5 @@
 #============================================================================
 
 e_arrow "Installing OSA"
-git clone "https://github.com/bunchc/rbac_prep" "$HOME/rbac_prep"
+git clone "${github_user}:${github_token}@https://github.com/bunchc/rbac_prep" "$HOME/rbac_prep"
 bash -c "cd $HOME/rbac_prep; ./rbac_prep.sh"
