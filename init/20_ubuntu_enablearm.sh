@@ -9,9 +9,10 @@
 #============================================================================
 
 if [ ! "$(which docker)" ]; then {
-    log "FAIL: Requirement not met: Docker" -c "red" -b
+    e_error "Docker not found, aborting."
+    exit
 } else {
-    log "Enabling docker support for ARM" -c "blue"
+    e_arrow "Enabling docker support for ARM"
     sudo apt-get install -qqy \
         --force-yes \
         --no-install-recommends \

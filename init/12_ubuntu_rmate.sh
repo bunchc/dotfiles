@@ -1,14 +1,14 @@
 #!/bin/bash -
-#title          :10_rmate.sh
+#title          :12_ubuntu_rmate.sh
 #description    :Installs rmate
 #author         :Cody Bunch
 #date           :2017-03-01
 #version        :000
-#usage          :. /path_to_file/10_rmate.sh
+#usage          :. /Users/bunchc/Dropbox/Work/projects/dotfiles/init/12_ubuntu_rmate.sh
 #notes          :https://github.com/textmate/rmate
 #============================================================================
 
-log "Installing rmate" -c "blue"
+e_arrow "Installing rmate"
 mkdir -p "$HOME"/bin
 curl -Lo ~/bin/rmate \
     https://raw.githubusercontent.com/textmate/rmate/master/bin/rmate

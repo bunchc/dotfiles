@@ -1,13 +1,17 @@
 #!/bin/bash -
-#title          :12_docker.sh
+#title          :13_ubuntu_docker.sh
 #description    :Install Docker
 #author         :Cody Bunch
 #date           :2017-03-01
 #version        :
-#usage          :. /Users/bunchc/Dropbox/Work/projects/bootstarp/init/12_docker.sh
+#usage          :. /Users/bunchc/Dropbox/Work/projects/dotfiles/init/13_ubuntu_docker.sh
 #notes          :
 #============================================================================
 
-log "Installing docker" -c "blue"
-curl -sL https://get.docker.com/ | sudo bash
-sudo usermod -oG docker $USER
+e_arrow "Installing Docker"
+if (curl -sL https://get.docker.com/ | sudo bash); then {
+    sudo usermod -oG docker "$USER"
+    e_success "Docker installed"
+} else {
+    e_error "Failed to install Docker"
+} fi

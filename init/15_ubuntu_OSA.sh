@@ -8,6 +8,6 @@
 #notes          :Defaults to the most recent stable branch unless overridden
 #============================================================================
 
-log "Installing OSA" -c "blue"
+e_arrow "Installing OSA"
 git clone "https://github.com/bunchc/rbac_prep" "$HOME/rbac_prep"
 bash -c "cd $HOME/rbac_prep; ./rbac_prep.sh"
