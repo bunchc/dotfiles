@@ -10,7 +10,7 @@
 
 e_arrow "Installing Docker"
 if (curl -sL https://get.docker.com/ | sudo bash); then {
-    sudo usermod -oG docker "$USER"
+    sudo usermod -aG docker "$USER"
     e_success "Docker installed"
 } else {
     e_error "Failed to install Docker"
