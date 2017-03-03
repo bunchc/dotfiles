@@ -56,32 +56,24 @@ packages=(
     tmux
     bmon
     traceroute
-    speedtest_cli
-    ssh-copy-id
     iptables
     binutils
     binwalk
     cifer
-    dex2jar
     dns2tcp
     fcrackzip
     foremost
-    hashpump
     hydra
     john
-    knock
     netpbm
     nmap
     pngcheck
     socat
-    sqlmap
     tcpflow
     tcpreplay
     tcptrace
     ucspi-tcp
     xpdf
-    xz
-    testssl
 )
 
 packages=($(setdiff "${packages[*]}" "$(dpkg --get-selections | grep -v deinstall | awk '{print $1}')"))
