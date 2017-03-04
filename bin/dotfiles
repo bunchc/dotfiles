@@ -290,17 +290,6 @@ if [[ ! -d $DOTFILES ]]; then
   e_header "Downloading dotfiles"
   git clone --recursive git://github.com/${github_user:-cowboy}/dotfiles.git $DOTFILES
   cd $DOTFILES
-elif [[ "$1" != "restart" ]]; then
-  # Make sure we have the latest files.
-  e_header "Updating dotfiles"
-  cd $DOTFILES
-  prev_head="$(git rev-parse HEAD)"
-  git pull
-  git submodule update --init --recursive --quiet
-  if [[ "$(git rev-parse HEAD)" != "$prev_head" ]]; then
-    e_header "Changes detected, restarting script"
-    exec "$0" "restart"
-  fi
 fi
 
 # Add binaries into the path
